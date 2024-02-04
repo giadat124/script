@@ -1,7 +1,7 @@
 --[[
 Cảm Ơn Bạn Đã Sử Dụng Dịch Vụ Tiến Tiny Chấm Sờ Pây, Chúc Bạn Có 1 Trải Nghiệm Vui Vẻ.
 Nếu Có Lỗi Hoặc Cần Hỗ Trợ Hãy Liên Hệ Trên Web Nhé, Bạn Có Thể Pr Cho Bạn Bè Nữa Càng Tốt:D
-Website: tientiny.space
+Website: LIGHTNING HUB
 ]]--
 
 	repeat wait() until game:IsLoaded()
@@ -317,24 +317,24 @@ Website: tientiny.space
 		return game:GetService("HttpService"):JSONDecode(msg)
 	end
 	getgenv()['Check_Setting'] = function(Name)
-		if not _G.Dis and not isfolder('LITGHTNING HUB SCRIPT Folder') then
-			makefolder('LITGHTNING HUB SCRIPT Folder')
+		if not _G.Dis and not isfolder('LIGHTNING HUB SCRIPT Folder') then
+			makefolder('LIGHTNING HUB SCRIPT Folder')
 		end
-		if not _G.Dis and not isfile('LITGHTNING HUB SCRIPT Folder/'..Name..'.json') then
-			writefile('LITGHTNING HUB SCRIPT Folder/'..Name..'.json',JsonEncode(_G.Setting_table))
+		if not _G.Dis and not isfile('LIGHTNING HUB SCRIPT Folder/'..Name..'.json') then
+			writefile('LIGHTNING HUB SCRIPT Folder/'..Name..'.json',JsonEncode(_G.Setting_table))
 		end
 	end
 	getgenv()['Get_Setting'] = function(Name)
-		if not _G.Dis and isfolder('LITGHTNING HUB SCRIPT Folder') and isfile('LITGHTNING HUB SCRIPT Folder/'..Name..'.json') then
-			_G.Setting_table = JsonDecode(readfile('LITGHTNING HUB SCRIPT Folder/'..Name..'.json'))
+		if not _G.Dis and isfolder('LIGHTNING HUB SCRIPT Folder') and isfile('LIGHTNING HUB SCRIPT Folder/'..Name..'.json') then
+			_G.Setting_table = JsonDecode(readfile('LIGHTNING HUB SCRIPT Folder/'..Name..'.json'))
 			return _G.Setting_table
 		elseif not _G.Dis then
 			Check_Setting(Name)
 		end
 	end
 	getgenv()['Update_Setting'] = function(Name)
-		if not _G.Dis and isfolder('LITGHTNING HUB SCRIPT Folder') and isfile('LITGHTNING HUB SCRIPT Folder/'..Name..'.json') then
-			writefile('LITGHTNING HUB SCRIPT Folder/'..Name..'.json',JsonEncode(_G.Setting_table))
+		if not _G.Dis and isfolder('LIGHTNING HUB SCRIPT Folder') and isfile('LIGHTNING HUB SCRIPT Folder/'..Name..'.json') then
+			writefile('LIGHTNING HUB SCRIPT Folder/'..Name..'.json',JsonEncode(_G.Setting_table))
 		elseif not _G.Dis then
 			Check_Setting(Name)
 		end
@@ -4753,7 +4753,7 @@ local LogoToggle = Instance.new("ImageLabel")
 end
 
 
-local Library = Update:Window("TienTiny.Space","2.0",Enum.KeyCode.RightControl);
+local Library = Update:Window("LIGHTNING HUB","2.0",Enum.KeyCode.RightControl);
 
 Main = Library:Tab("Genneral",6026568198)
 Sta = Library:Tab("Stats",7040410130)
